@@ -11,7 +11,7 @@ function isValidGEOJSON(obj) {
         if (obj.hasOwnProperty('features') && obj.features.length > 0)
             return true
         else
-        console.error('il tuo geoJson non valido')
+        console.error('il tuo geo Json non valido')
     } catch {
       return false;
     }
