@@ -1,0 +1,19 @@
+<!-- https://docs.nativescript.org/ui/overview  -->
+<Page
+    navigatingTo="onNavigatingTo"
+    xmlns:lv="nativescript-ui-listview">
+
+    <ActionBar class="schedule">
+        <Label text="Schedule"></Label>
+        <ActionItem tap="showFunctions" ios.position="left" ios.systemIcon="8"> </ActionItem>
+        <ActionItem tap="showDialog" ios.position="right" ios.systemIcon="17"> </ActionItem>
+    </ActionBar>
+    <GridLayout>
+        <GridLayout visibility="{{isCorrect == '1' ? 'visible' : 'collapsed'}}">
+            <Label text="Hai vinto!"  fontSize="24" color="white" textAlignment="center" backgroundColor="green"/>
+        </GridLayout>
+        <GridLayout visibility="{{isCorrect == '0' ? 'visible' : 'collapsed'}}">
+            <Label text="Non hai vinto!" fontSize="24" color="white" textAlignment="center" backgroundColor="red"/>
+        </GridLayout>
+    </GridLayout>
+</Page>
